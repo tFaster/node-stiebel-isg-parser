@@ -1,0 +1,10 @@
+# IDE
+/.idea
+/*.iml
+
+# compiled output
+/lib
+/coverage
+
+# dependencies
+/node_modules

@@ -1,0 +1,44 @@
+{
+  "name": "@tfaster/node-stiebel-isg-parser",
+  "version": "1.0.0-alpha.1",
+  "description": "Parser for the Stiebel Eltron ISG web interface written in typescript",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": ["lib/**/*"],
+  "scripts": {
+    "build": "rimraf lib && tsc",
+    "test": "jest",
+    "test-watch": "jest --watch",
+    "coverage": "jest --coverage",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'",
+    "link": "npm run build && cd lib && npm link",
+    "prepare" : "npm run build",
+    "prepublishOnly" : "npm test && npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tFaster/node-stiebel-isg-parser.git"
+  },
+  "keywords": [
+    "stiebel",
+    "isg"
+  ],
+  "author": "Timo Schneller",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tFaster/node-stiebel-isg-parser/issues"
+  },
+  "homepage": "https://github.com/tFaster/node-stiebel-isg-parser#readme",
+  "devDependencies": {
+    "@types/jest": "^25.1.3",
+    "@types/node": "^13.7.4",
+    "jest": "^25.1.0",
+    "ts-jest": "^25.2.1",
+    "ts-node": "^8.6.2",
+    "tslint": "^6.0.0",
+    "typescript": "^3.8.2"
+  },
+  "dependencies": {
+    "node-html-parser": "^1.2.6"
+  }
+}

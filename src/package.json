@@ -1,0 +1,23 @@
+{
+  "name": "@tfaster/node-stiebel-isg-parser",
+  "version": "1.0.0-alpha.1",
+  "description": "Parser for the Stiebel Eltron ISG web interface written in typescript",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tFaster/node-stiebel-isg-parser.git"
+  },
+  "keywords": [
+    "stiebel",
+    "isg"
+  ],
+  "author": "Timo Schneller",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tFaster/node-stiebel-isg-parser/issues"
+  },
+  "dependencies": {
+    "node-html-parser": "^1.2.6"
+  }
+}
