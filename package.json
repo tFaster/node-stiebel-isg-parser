@@ -1,6 +1,6 @@
 {
   "name": "@tfaster/node-stiebel-isg-parser",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "description": "Parser for the Stiebel Eltron ISG web interface written in typescript",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
