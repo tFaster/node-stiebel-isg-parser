@@ -78,6 +78,9 @@ export interface StiebelIsgSystemInfo {
 
     /** extract air dew point in °C */
     extractAirDewPointTemperature: number;
+
+    /** differential pressure */
+    differentialPressure: number;
   },
   cooling: {
 

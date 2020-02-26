@@ -6,7 +6,7 @@ import { StiebelIsgSystemInfo } from '../src/StiebelIsgParserTypes';
 describe('StiebelIsgParser', () => {
 
   it('should parse system info', () => {
-    const rawData = readFileSync(join(__dirname, './data/isg-web_info-system.html')).toString();
+    const rawData = readFileSync(join(__dirname, './data/isg-web_info-system_10.1.0.html')).toString();
     const parsed: StiebelIsgSystemInfo = parseSystemInfo(rawData);
     expect(parsed).toBeDefined();
     expect(parsed.roomTemperature.actualRoomTemperatureHc1).toBe(20.1);
@@ -35,6 +35,7 @@ describe('StiebelIsgParser', () => {
     expect(parsed.ventilation.extractAirRelativeHumidity).toBe(35);
     expect(parsed.ventilation.extractAirTemperature).toBe(25.4);
     expect(parsed.ventilation.extractAirDewPointTemperature).toBe(8.6);
+    expect(parsed.ventilation.differentialPressure).toBe(0);
 
     expect(parsed.cooling.dewPointTemperatureHc1).toBe(11.1);
     expect(parsed.cooling.dewPointTemperatureHc2).toBe(11.2);

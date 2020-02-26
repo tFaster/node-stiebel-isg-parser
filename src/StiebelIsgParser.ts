@@ -45,14 +45,15 @@ export function parseSystemInfo(rawData: string): StiebelIsgSystemInfo {
       extractAirSetFlowRate: readFloat(valueElements[20]),
       extractAirRelativeHumidity: readFloat(valueElements[21]),
       extractAirTemperature: readFloat(valueElements[22]),
-      extractAirDewPointTemperature: readFloat(valueElements[23])
+      extractAirDewPointTemperature: readFloat(valueElements[23]),
+      differentialPressure: readFloat(valueElements[24])
     },
     cooling: {
-      dewPointTemperatureHc1: readFloat(valueElements[24]),
-      dewPointTemperatureHc2: readFloat(valueElements[25])
+      dewPointTemperatureHc1: readFloat(valueElements[25]),
+      dewPointTemperatureHc2: readFloat(valueElements[26])
     },
-    heatSourceHeatingStage: parseInt(valueElements[26].rawText, 10),
-    energyManagementEnabled: !readBooleanImage(valueElements[27], 'ste-symbol_an-97b765.png')
+    heatSourceHeatingStage: parseInt(valueElements[27].rawText, 10),
+    energyManagementEnabled: !readBooleanImage(valueElements[28], 'ste-symbol_an-97b765.png')
   };
 
   return res;
