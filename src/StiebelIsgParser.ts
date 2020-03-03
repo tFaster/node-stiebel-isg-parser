@@ -1,6 +1,25 @@
 import { parse } from 'node-html-parser';
 import HTMLElement from 'node-html-parser/dist/nodes/html';
-import { StiebelIsgSystemInfo } from './StiebelIsgParserTypes';
+import { StiebelIsgSystemInfo, StiebelIsgVentilationStages } from './StiebelIsgParserTypes';
+
+
+export function parseVentilationStages(rawData: string): StiebelIsgVentilationStages {
+  const rawDataWithReplacedScriptTags: string = rawData.replace(/script/g, 'article');
+  const root: HTMLElement = parse(rawDataWithReplacedScriptTags) as HTMLElement;
+  const articleElements: HTMLElement[] = root.querySelectorAll('#werte div.values article');
+  const dayStage: string = articleElements[0].rawText.trim().substr(-3, 1);
+  const nightStage: string = articleElements[1].rawText.trim().substr(-3, 1);
+  const standbyStage: string = articleElements[2].rawText.trim().substr(-3, 1);
+  const partyStage: string = articleElements[3].rawText.trim().substr(-3, 1);
+  const manualStage: string = articleElements[4].rawText.trim().substr(-3, 1);
+  return {
+    day: parseInt(dayStage, 10),
+    night: parseInt(nightStage, 10),
+    standby: parseInt(standbyStage, 10),
+    party: parseInt(partyStage, 10),
+    manual: parseInt(manualStage, 10),
+  }
+}
 
 export function parseSystemInfo(rawData: string): StiebelIsgSystemInfo {
   const root: HTMLElement = parse(rawData) as HTMLElement;

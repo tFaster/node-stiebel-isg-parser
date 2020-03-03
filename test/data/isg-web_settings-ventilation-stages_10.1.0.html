@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+  <title>STIEBEL ELTRON Reglersteuerung</title>
+</head>
+<body>
+<div class="container" id="page">
+  <div id="main">
+    <form id="werte" action="#" onsubmit="saveValues(this);return false;">
+      <div id="content">
+        <script type="text/javascript">
+          var valSettings = new Array();
+          var jsvalues = new Array();
+          var jsobj;
+        </script>
+        <div class="focusguard" id="focusguard-1" tabindex="0"></div>
+        <div class="calibration round span-24 last" id="calval82">
+          <div class="span-7 ialigned">
+            <h3 class="title">DAY STAGE</h3>
+          </div>
+          <div class="values span-7">
+            <input type="text" tabindex="1" value="" name="val82" id="val82" class="edit upndown firstElement" style="width:3.6em">
+
+            <script language="javascript" type="text/javascript">
+              valSettings['val82'] = new Array();
+              valSettings['val82']['type'] = 'int';
+              valSettings['val82']['min'] = '0';
+              valSettings['val82']['max'] = '3';
+
+
+              jsvalues['82'] = new Array();
+              jsvalues['82']['id'] = 'val82';
+              jsvalues['82']['val'] = '2';
+            </script>
+          </div>
+        </div>
+        <div class="calibration round span-24 last" id="calval83">
+          <div class="span-7 ialigned">
+            <h3 class="title">NIGHT STAGE</h3>
+          </div>
+          <div class="values span-7">
+            <input type="text" tabindex="2" value="" name="val83" id="val83" class="edit upndown" style="width:3.6em">
+
+            <script language="javascript" type="text/javascript">
+              valSettings['val83'] = new Array();
+              valSettings['val83']['type'] = 'int';
+              valSettings['val83']['min'] = '0';
+              valSettings['val83']['max'] = '3';
+
+
+              jsvalues['83'] = new Array();
+              jsvalues['83']['id'] = 'val83';
+              jsvalues['83']['val'] = '1';
+            </script>
+          </div>
+        </div>
+        <div class="calibration round span-24 last" id="calval84">
+          <div class="span-7 ialigned">
+            <h3 class="title">STANDBY STAGE</h3>
+          </div>
+          <div class="values span-7">
+            <input type="text" tabindex="3" value="" name="val84" id="val84" class="edit upndown" style="width:3.6em">
+
+            <script language="javascript" type="text/javascript">
+              valSettings['val84'] = new Array();
+              valSettings['val84']['type'] = 'int';
+              valSettings['val84']['min'] = '0';
+              valSettings['val84']['max'] = '3';
+
+
+              jsvalues['84'] = new Array();
+              jsvalues['84']['id'] = 'val84';
+              jsvalues['84']['val'] = '0';
+            </script>
+          </div>
+        </div>
+        <div class="calibration round span-24 last" id="calval85">
+          <div class="span-7 ialigned">
+            <h3 class="title">PARTY STAGE</h3>
+          </div>
+          <div class="values span-7">
+            <input type="text" tabindex="4" value="" name="val85" id="val85" class="edit upndown" style="width:3.6em">
+
+            <script language="javascript" type="text/javascript">
+              valSettings['val85'] = new Array();
+              valSettings['val85']['type'] = 'int';
+              valSettings['val85']['min'] = '0';
+              valSettings['val85']['max'] = '3';
+
+
+              jsvalues['85'] = new Array();
+              jsvalues['85']['id'] = 'val85';
+              jsvalues['85']['val'] = '3';
+            </script>
+          </div>
+        </div>
+        <div class="calibration round span-24 last" id="calval188">
+          <div class="span-7 ialigned">
+            <h3 class="title">MANUAL STAGE</h3>
+          </div>
+          <div class="values span-7">
+            <input type="text" tabindex="5" value="" name="val188" id="val188" class="edit upndown lastElement" style="width:3.6em">
+
+            <script language="javascript" type="text/javascript">
+              valSettings['val188'] = new Array();
+              valSettings['val188']['type'] = 'int';
+              valSettings['val188']['min'] = '0';
+              valSettings['val188']['max'] = '3';
+
+
+              jsvalues['188'] = new Array();
+              jsvalues['188']['id'] = 'val188';
+              jsvalues['188']['val'] = '2';
+            </script>
+          </div>
+        </div>
+
+        <script type="text/javascript">
+          $(document).ready(function() {
+            $('#focusguard-1').focus(function() {
+              // "last" focus guard got focus: set focus to the first field
+              $('.lastElement').focus();
+              $('.lastElement').select();
+
+            });
+
+            $('#focusguard-2').focus(function() {
+              // "first" focus guard got focus: set focus to the last field
+              $('.firstElement').focus();
+              $('.firstElement').select();
+            });
+          });
+        </script>
+
+      </div>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>

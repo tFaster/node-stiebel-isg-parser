@@ -97,3 +97,11 @@ export interface StiebelIsgSystemInfo {
   /** energy management enabled */
   energyManagementEnabled: boolean
 }
+
+export interface StiebelIsgVentilationStages {
+  day: number;
+  night: number;
+  standby: number;
+  party: number;
+  manual: number;
+}

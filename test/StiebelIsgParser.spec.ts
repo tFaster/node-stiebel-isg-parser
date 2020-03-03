@@ -1,9 +1,20 @@
 import { readFileSync } from 'fs';
 import { join } from 'path';
-import { parseSystemInfo } from '../src/StiebelIsgParser';
-import { StiebelIsgSystemInfo } from '../src/StiebelIsgParserTypes';
+import { parseSystemInfo, parseVentilationStages } from '../src/StiebelIsgParser';
+import { StiebelIsgSystemInfo, StiebelIsgVentilationStages } from '../src/StiebelIsgParserTypes';
 
 describe('StiebelIsgParser', () => {
+
+  it('should parse ventilation stages', () => {
+    const rawData = readFileSync(join(__dirname, './data/isg-web_settings-ventilation-stages_10.1.0.html')).toString();
+    const parsed: StiebelIsgVentilationStages = parseVentilationStages(rawData);
+    expect(parsed).toBeDefined();
+    expect(parsed.day).toBe(2);
+    expect(parsed.night).toBe(1);
+    expect(parsed.standby).toBe(0);
+    expect(parsed.party).toBe(3);
+    expect(parsed.manual).toBe(2);
+  });
 
   it('should parse system info', () => {
     const rawData = readFileSync(join(__dirname, './data/isg-web_info-system_10.1.0.html')).toString();
