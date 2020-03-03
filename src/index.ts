@@ -1,2 +1,2 @@
-export { parseSystemInfo } from './StiebelIsgParser';
+export { parseSystemInfo, parseVentilationStages } from './StiebelIsgParser';
 export { StiebelIsgSystemInfo } from './StiebelIsgParserTypes';
