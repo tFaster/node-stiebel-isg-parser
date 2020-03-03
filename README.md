@@ -9,3 +9,6 @@ Parser for the Stiebel Eltron ISG web interface written in typescript
 
 ### parseSystemInfo
 Parses page "Info" --> "System".
+
+### parseVentilationStages
+Parses page "Settings" --> "Ventilation" --> "Ventilation Stages".
