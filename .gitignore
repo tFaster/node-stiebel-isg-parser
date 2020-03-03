@@ -5,6 +5,7 @@
 # compiled output
 /lib
 /coverage
+/*.tgz
 
 # dependencies
 /node_modules
