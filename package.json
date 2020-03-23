@@ -40,6 +40,6 @@
     "typescript": "^3.8.2"
   },
   "dependencies": {
-    "node-html-parser": "^1.2.6"
+    "node-html-parser": "^1.2.8"
   }
 }
